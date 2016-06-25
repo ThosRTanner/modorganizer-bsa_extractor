@@ -91,7 +91,7 @@ void BsaExtractor::modInstalledHandler(const QString &modName/*, EFileCategory i
 
   QFileInfoList archives = dir.entryInfoList(QStringList("*.bsa"));
   if (archives.length() != 0 &&
-      (QuestionBoxMemory::query(nullptr, "unpackBSA", tr("Extract BSA"),
+      (QuestionBoxMemory::query(nullptr, "unpackBSA", tr("Extract BSA"), modName,
                              tr("This mod contains at least one BSA. Do you want to unpack it?\n"
                                 "(This removes the BSA after completion. If you don't know about BSAs, just select no)"),
                              QDialogButtonBox::Yes | QDialogButtonBox::No, QDialogButtonBox::No) == QDialogButtonBox::Yes)) {
